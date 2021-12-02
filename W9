@@ -1,0 +1,46 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
+typedef long long l1;
+int main() {
+    l1 t;
+    cin>>t;
+    while(t--){
+        l1 n,k;
+        cin>>n>>k;
+        l1 tp=n;
+        l1 res=0;
+        res=n/k;
+        n=res+n%k;
+        while(n>=k){
+            l1 nw=n/k;
+            res+=nw;
+            n=nw+n%k;
+            
+        }
+        cout<<res+tp<<"\n";
+    }
+   
+    return 0;
+}
